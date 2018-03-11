@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const chalk = require('chalk');
+
+console.log(chalk.blue('ReactJs Generator'));
+
+program
+  .version(require('../package').version)
+  .usage('<command> [options]')
+  .command('wizard', 'Start generator wizard', {isDefault: true})
+  .command('init', 'Create a local settings file (.vuegenerator)')
+  .command('component', 'Create a component')
+  .command('store', 'Create a store module')
+  .command('view', 'Create a view')
+  .command('reset', 'Reset global settings')
+  .command('settings', 'Set or display settings')
+  .command('show-templates', 'Open default template directory to show or edit default templates')
+  .command('copy-templates', 'Copy default templates to desired location')
+  .parse(process.argv);

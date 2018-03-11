@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const chalk = require('chalk');
+const Settings = require('../src/settings');
+
+program
+  .parse(process.argv);
+
+Settings.resetSettings();
+
+console.log();
+console.log(chalk.green('Global settings are reset to defaults.'));
+console.log();
+
+console.log(chalk.green('Global settings:'));
+
+Settings.logSettings(Settings.getSettings({}, true));
+
+

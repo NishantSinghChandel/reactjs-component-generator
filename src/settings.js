@@ -1,4 +1,4 @@
-const settingsFile = '.vuegenerator';
+const settingsFile = '.reactgenerator';
 
 const userSettings = require('user-settings').file(settingsFile);
 const fs = require('fs');

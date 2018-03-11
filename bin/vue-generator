@@ -9,7 +9,7 @@ program
   .version(require('../package').version)
   .usage('<command> [options]')
   .command('wizard', 'Start generator wizard', {isDefault: true})
-  .command('init', 'Create a local settings file (.vuegenerator)')
+  .command('init', 'Create a local settings file (.reactgenerator)')
   .command('component', 'Create a component')
   .command('store', 'Create a store module')
   .command('view', 'Create a view')

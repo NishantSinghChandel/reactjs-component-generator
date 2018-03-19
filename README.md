@@ -53,7 +53,7 @@ The generated file will be
 Directly create a component based on the current settings with styled component.
 
 ```console
-$ rg components <name>
+$ rg component styled <name>
 ```
 
 Arguments:

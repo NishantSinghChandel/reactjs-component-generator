@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container} './{{name_pc}}.styled';
+import {Container} from './{{name_pc}}.styled';
 
 export default class {{name_pc}} extends Component
 {

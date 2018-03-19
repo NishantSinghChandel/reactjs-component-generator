@@ -18,7 +18,7 @@
     "rg": "bin/vue-generator",
     "rg-wizard": "bin/vue-generator-wizard",
     "rg-component": "bin/vue-generator-component",
-    "rgs-component": "bin/react-generator-component-styled",
+    "rg-components": "bin/react-generator-component-styled",
     "rg-view": "bin/vue-generator-view",
     "rg-reset": "bin/vue-generator-reset",
     "rg-settings": "bin/vue-generator-settings",

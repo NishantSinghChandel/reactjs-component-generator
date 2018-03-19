@@ -53,7 +53,7 @@ The generated file will be
 Directly create a component based on the current settings with styled component.
 
 ```console
-$ rg styled <name>
+$ rg-styled <name>
 ```
 
 Arguments:
@@ -69,9 +69,9 @@ Options:
 
 Examples:
 ```console
-$ rg components check-box
-$ rg components RadioButton -d ./my-component/ui
-$ rg components videoPlayer -d ./src/my-component/players/ -t base-video-component -f
+$ rg-styled check-box
+$ rg-styled RadioButton -d ./my-component/ui
+$ rg-styled videoPlayer -d ./src/my-component/players/ -t base-video-component -f
 ```
 
 The generated file will be

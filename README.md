@@ -82,7 +82,10 @@ The generated file will be
 #### store
 Directly create a store module based on the current settings.
 
-$ vg store <name>
+```console
+$ rg store <name>
+```
+
 Arguments:
 
 name: The name you want to use for the store module.
@@ -95,9 +98,9 @@ Options:
 
 Examples:
 ```
-$ vg store user
-$ vg store shopping-cart -d ./modules
-$ vg store Car -t complex-store
+$ rg store user
+$ rg store shopping-cart -d ./modules
+$ rg store Car -t complex-store
 ```
 
 **Note**:This store is specifically for Redux-box users.

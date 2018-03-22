@@ -1,7 +1,7 @@
 {
   "name": "reactjs-component-generator",
   "version": "1.1.2",
-  "description": "A CLI generator for reactjs components",
+  "description": "A CLI generator for reactjs components, styled-components and store modules",
   "preferGlobal": true,
   "bin": {
     "react-generator": "bin/vue-generator",

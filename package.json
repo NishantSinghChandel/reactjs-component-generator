@@ -26,7 +26,16 @@
     "rg-show-templates": "bin/vue-generator-show-templates",
     "rg-copy-templates": "bin/vue-generator-copy-templates",
     "rg-init": "bin/vue-generator-init"
-  },
+  },"keywords": [
+    "redux",
+    "react",
+    "reactjs",
+    "CLI",
+    "component generator",
+    "javascript",
+    "react-native",
+    "redux-box"
+  ],
   "author": "Nishant Singh",
   "license": "MIT",
   "repository": {

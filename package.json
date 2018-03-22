@@ -1,6 +1,6 @@
 {
   "name": "reactjs-component-generator",
-  "version": "1.1.4",
+  "version": "1.2.5",
   "description": "A CLI generator for reactjs components, styled-components and store modules",
   "preferGlobal": true,
   "bin": {
@@ -26,7 +26,8 @@
     "rg-show-templates": "bin/vue-generator-show-templates",
     "rg-copy-templates": "bin/vue-generator-copy-templates",
     "rg-init": "bin/vue-generator-init"
-  },"keywords": [
+  },
+  "keywords": [
     "redux",
     "react",
     "reactjs",

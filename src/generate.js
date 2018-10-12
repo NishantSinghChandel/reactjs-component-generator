@@ -54,8 +54,18 @@ function getNames(name) {
     name,
     name_cc: toCamelCase(name),
     name_pc: toPascalCase(name),
-    name_sc: toSlugCase(name)
+    name_sc: toSlugCase(name),
+    name_up: toUpperCase(name),
+    name_lo: toLowerCase(name)
   }
+}
+
+function toUpperCase(name) {
+  return name.toUpperCase();
+}
+
+function toLowerCase(name) {
+  return name.toLowerCase();
 }
 
 function pathExists(value) {

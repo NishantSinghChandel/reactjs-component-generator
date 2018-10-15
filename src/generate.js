@@ -7,6 +7,8 @@ const render = require('consolidate').handlebars.render;
 const toSlugCase = require('to-slug-case');
 const toCamelCase = require('to-camel-case');
 const toPascalCase = require('to-pascal-case');
+const toSnakeCase = require('to-snake-case');
+const toSpaceCase = require('to-space-case');
 const isTextOrBinary = require('istextorbinary');
 
 module.exports = function generate(type, options, settings) {
@@ -54,8 +56,20 @@ function getNames(name) {
     name,
     name_cc: toCamelCase(name),
     name_pc: toPascalCase(name),
-    name_sc: toSlugCase(name)
+    name_sc: toSlugCase(name),
+    name_up: toUpperCase(name),
+    name_lo: toLowerCase(name),
+    name_sn: toSnakeCase(name),
+    name_sp: toSpaceCase(name)
   }
+}
+
+function toUpperCase(name) {
+  return name.toUpperCase();
+}
+
+function toLowerCase(name) {
+  return name.toLowerCase();
 }
 
 function pathExists(value) {

@@ -25,6 +25,44 @@ Directly create a component based on the current settings.
 $ rg component <name>
 ```
 
+#### Typescript component
+
+Directly create a component with typeScript config based on the current settings.
+
+```console
+$ rg tscomponent <name>
+```
+
+The generated file will be
+`*filename.ts
+*filename.scss`
+
+#### Typescript Page [Recommended for Next.js + typeScript]
+
+Directly create a page with typeScript config based on the current settings.
+
+```console
+$ rg tspage <name>
+```
+The generated file will be
+`*filename.ts
+*index.ts
+*filename.scss`
+
+
+#### Page [Recommended for Next.js]
+
+Directly create a page based on the current settings.
+
+```console
+$ rg page <name>
+```
+
+The generated file will be
+`*filename.js
+*index.js
+*filename.scss`
+
 Arguments:
 
 * ```name```: The name you want to use for the component.

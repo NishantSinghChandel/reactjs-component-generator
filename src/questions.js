@@ -20,8 +20,24 @@ exports.getGeneratorQuestions = function (type, settings, name) {
       questions = [askName(name), askDestination(templateType.COMPONENT, settings.componentDestination)];
       break;
     }
+    case wizardType.STYLEDCOMPONENT: {
+      questions = [askName(name), askDestination(templateType.STYLEDCOMPONENT, settings.componentDestination)];
+      break;
+    }
     case wizardType.VIEW: {
       questions = [askName(name), askDestination(templateType.VIEW, settings.viewDestination)];
+      break;
+    }
+    case wizardType.TSCOMPONENT: {
+      questions = [askName(name), askDestination(templateType.TSCOMPONENT, settings.tscomponentDestination)];
+      break;
+    }
+    case wizardType.PAGE: {
+      questions = [askName(name), askDestination(templateType.PAGE, settings.pageDestination)];
+      break;
+    }
+    case wizardType.TSPAGE: {
+      questions = [askName(name), askDestination(templateType.TSPAGE, settings.tspageDestination)];
       break;
     }
   }

@@ -1,5 +1,5 @@
-# reactjs-component-generator
-A CLI generator for Reactjs components,styled-components and store.
+# react-component-generator
+A CLI generator for React components,styled-components and store.
 
 ## Install
 

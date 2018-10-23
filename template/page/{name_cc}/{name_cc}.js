@@ -4,7 +4,7 @@ export default class {{name_cc}} extends Component {
   render() {    
     return (
         <div className="page-{{name_sc}}">
-        Hello Next.js
+        Hello {{name_cc}} 
       </div>
     )
   }

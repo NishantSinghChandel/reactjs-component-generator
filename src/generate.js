@@ -57,8 +57,8 @@ function getNames(name) {
     name_cc: toCamelCase(name),
     name_pc: toPascalCase(name),
     name_sc: toSlugCase(name),
-    name_up: toUpperCase(name),
-    name_lo: toLowerCase(name),
+    name_uc: toUpperCase(name),
+    name_lc: toLowerCase(name),
     name_sn: toSnakeCase(name),
     name_sp: toSpaceCase(name)
   }

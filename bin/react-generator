@@ -3,7 +3,7 @@
 const program = require('commander');
 const chalk = require('chalk');
 
-console.log(chalk.blue('ReactJs Generator'));
+console.log(chalk.blue('React Generator [Author: Nishant Singh]'));
 
 program
   .version(require('../package').version)
@@ -11,10 +11,17 @@ program
   .command('wizard', 'Start generator wizard', {isDefault: true})
   .command('init', 'Create a local settings file (.reactgenerator)')
   .command('component', 'Create a component')
+  .command('config', 'Create a configuration folder for http request, api url and local storage')
+  .command('request', 'Create a file for http request methods')
+  .command('storage', 'Create a file for local storage methods')
+  .command('services', 'Create a services (include api request, local storage and api call service')
+  .command('service-module', 'Create a api service module')
   .command('tscomponent', 'Create a tscomponent')
   .command('page', 'Create a page')
   .command('tspage', 'Create a tspage')
-  .command('store', 'Create a store module')
+  .command('store', 'Create a store module for redux-box')
+  .command('redux', 'Create a redux store')
+  .command('redux-module', 'Create a redux store module')
   .command('view', 'Create a view')
   .command('reset', 'Reset global settings')
   .command('settings', 'Set or display settings')

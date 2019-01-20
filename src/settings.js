@@ -1,45 +1,64 @@
-const settingsFile = '.reactgenerator';
+const settingsFile = ".reactgenerator";
 
-const userSettings = require('user-settings').file(settingsFile);
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
+const userSettings = require("user-settings").file(settingsFile);
+const fs = require("fs");
+const path = require("path");
+const chalk = require("chalk");
 
 const defaultSettings = {
-  viewDestination: './src/view/',
-  storeDestination: './src/store/',
-  componentDestination: './src/components/',
-  tscomponentDestination: './components/',
-  pageDestination: './src/pages/',
-  tspageDestination: './pages/',
-  templatePath: ''
+  viewDestination: "./src/view/",
+  storeDestination: "./src/store/",
+  componentDestination: "./src/components/",
+  tscomponentDestination: "./components/",
+  pageDestination: "./pages/",
+  tspageDestination: "./pages/",
+  reduxDestination: "./src/",
+  setupDestination: "./src/",
+  reduxModuleDestination: "./src/store/",
+  serviceModuleDestination: "./src/services/",
+  servicesDestination: "./src/",
+  configDestination: "./src/services/",
+  requestDestination: "./src/services/config/",
+  storageDestination: "./src/services/config/",
+  templatePath: ""
 };
 
-exports.getSettings = function (overrides = {}, ignoreLocalSettings = false) {
+exports.getSettings = function(overrides = {}, ignoreLocalSettings = false) {
   const localSettings = ignoreLocalSettings ? {} : this.getLocalSettings();
 
-  return Object.assign({}, defaultSettings, this.getUserSettings(), localSettings, overrides);
+  return Object.assign(
+    {},
+    defaultSettings,
+    this.getUserSettings(),
+    localSettings,
+    overrides
+  );
 };
 
-exports.resetSettings = function () {
+exports.resetSettings = function() {
   Object.keys(defaultSettings).forEach(key => userSettings.unset(key));
 };
 
-exports.setGlobalSettings = function (settings) {
+exports.setGlobalSettings = function(settings) {
   Object.keys(settings).forEach(key => userSettings.set(key, settings[key]));
 };
 
-exports.setLocalSettings = function (settings) {
-  fs.writeFileSync(path.resolve(settingsFile), JSON.stringify(settings, null, 2));
+exports.setLocalSettings = function(settings) {
+  fs.writeFileSync(
+    path.resolve(settingsFile),
+    JSON.stringify(settings, null, 2)
+  );
 };
 
-exports.hasLocalSettings = function () {
+exports.hasLocalSettings = function() {
   return fs.existsSync(path.resolve(settingsFile));
 };
 
-exports.getLocalSettings = function () {
+exports.getLocalSettings = function() {
   if (this.hasLocalSettings()) {
-    const fileContent = fs.readFileSync(path.resolve(settingsFile), {encoding: 'utf-8'});
+    const fileContent = fs.readFileSync(path.resolve(settingsFile), {
+      encoding: "utf-8"
+    });
 
     let settings;
 
@@ -56,7 +75,7 @@ exports.getLocalSettings = function () {
   return {};
 };
 
-exports.getUserSettings = function () {
+exports.getUserSettings = function() {
   return Object.keys(defaultSettings).reduce((settings, key) => {
     const setting = userSettings.get(key);
 
@@ -68,8 +87,8 @@ exports.getUserSettings = function () {
   }, {});
 };
 
-exports.logSettings = function (settings) {
-  Object.keys(settings).forEach((key) => {
+exports.logSettings = function(settings) {
+  Object.keys(settings).forEach(key => {
     console.log(`${chalk.bold(key)}: '${settings[key]}'`);
   });
 };

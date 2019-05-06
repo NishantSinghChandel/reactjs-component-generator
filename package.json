@@ -1,6 +1,6 @@
 {
   "name": "reactjs-component-generator",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "A CLI generator for react components, styled-components, pages, services and store modules",
   "preferGlobal": true,
   "bin": {

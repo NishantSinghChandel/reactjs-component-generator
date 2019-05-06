@@ -12,13 +12,45 @@ exports.getGeneratorQuestions = function(type, settings, name) {
       questions = [
         askType(),
         askName(name),
-        askDestination(templateType.VIEW, settings.viewDestination, true),
-        askDestination(templateType.STORE, settings.storeDestination, true),
         askDestination(
           templateType.COMPONENT,
           settings.componentDestination,
           true
-        )
+        ),
+        askDestination(
+          templateType.STYLEDCOMPONENT,
+          settings.componentDestination,
+          true
+        ),
+        askDestination(
+          templateType.TSCOMPONENT,
+          settings.tscomponentDestination,
+          true
+        ),
+        askDestination(templateType.PAGE, settings.pageDestination, true),
+        askDestination(templateType.TSPAGE, settings.tspageDestination, true),
+        askDestination(templateType.VIEW, settings.viewDestination, true),
+        askDestination(templateType.SETUP, settings.setupDestination, true),
+        askDestination(templateType.STORE, settings.storeDestination, true),
+        askDestination(templateType.REDUX, settings.reduxDestination, true),
+        askDestination(
+          templateType.REDUXMODULE,
+          settings.reduxModuleDestination,
+          true
+        ),
+        askDestination(
+          templateType.SERVICES,
+          settings.servicesDestination,
+          true
+        ),
+        askDestination(templateType.CONFIG, settings.configDestination, true),
+        askDestination(
+          templateType.SERVICEMODULE,
+          settings.serviceModuleDestination,
+          true
+        ),
+        askDestination(templateType.REQUEST, settings.requestDestination, true),
+        askDestination(templateType.STORAGE, settings.storageDestination, true)
       ];
       break;
     }

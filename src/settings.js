@@ -6,10 +6,11 @@ const path = require("path");
 const chalk = require("chalk");
 
 const defaultSettings = {
+  componentDestination: "./src/components/",
+  styledComponentDestination: "./src/components/",
+  tscomponentDestination: "./components/",
   viewDestination: "./src/view/",
   storeDestination: "./src/store/",
-  componentDestination: "./src/components/",
-  tscomponentDestination: "./components/",
   pageDestination: "./pages/",
   tspageDestination: "./pages/",
   reduxDestination: "./src/",

@@ -1,17 +1,17 @@
 module.exports = {
-  VIEW: "view",
-  STORE: "store",
   COMPONENT: "component",
+  STYLEDCOMPONENT: "styled-component",
   TSCOMPONENT: "tscomponent",
   PAGE: "page",
   TSPAGE: "tspage",
-  STYLEDCOMPONENT: "styled-component",
+  SETUP: "setup",
+  STORE: "store",
   SERVICES: "services",
+  CONFIG: "config",
   SERVICEMODULE: "service-module",
-  REDUX: "redux",
-  REDUXMODULE: "redux-module",
   STORAGE: "storage",
   REQUEST: "request",
-  CONFIG: "config",
-  SETUP: "setup"
+  REDUX: "redux",
+  REDUXMODULE: "redux-module",
+  VIEW: "view"
 };

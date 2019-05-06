@@ -1,52 +1,67 @@
-const path = require('path');
-const fs = require('fs');
-const chalk = require('chalk');
-const async = require('async');
-const metalsmith = require('metalsmith');
-const render = require('consolidate').handlebars.render;
-const toSlugCase = require('to-slug-case');
-const toCamelCase = require('to-camel-case');
-const toPascalCase = require('to-pascal-case');
-const toSnakeCase = require('to-snake-case');
-const toSpaceCase = require('to-space-case');
-const isTextOrBinary = require('istextorbinary');
+const path = require("path");
+const fs = require("fs");
+const chalk = require("chalk");
+const async = require("async");
+const metalsmith = require("metalsmith");
+const render = require("consolidate").handlebars.render;
+const toSlugCase = require("to-slug-case");
+const toCamelCase = require("to-camel-case");
+const toPascalCase = require("to-pascal-case");
+const toSnakeCase = require("to-snake-case");
+const toSpaceCase = require("to-space-case");
+const isTextOrBinary = require("istextorbinary");
 
 module.exports = function generate(type, options, settings) {
-  if (settings.templatePath == '') {
-    settings.templatePath = path.join(__dirname, '../template');
+  if (settings.templatePath == "") {
+    settings.templatePath = path.join(__dirname, "../template");
   }
 
   if (!pathExists(settings.templatePath)) {
     console.log();
-    console.error(chalk.red(`Template folder (${path.resolve(settings.templatePath)}) doesn't exist`));
+    console.error(
+      chalk.red(
+        `Template folder (${path.resolve(settings.templatePath)}) doesn't exist`
+      )
+    );
     return;
   }
 
-  const fullTemplatePath = path.join(settings.templatePath, '/' + type);
+  const fullTemplatePath = path.join(settings.templatePath, "/" + type);
 
   if (!pathExists(fullTemplatePath)) {
     console.log();
-    console.log(chalk.red(`'${options.type}' template folder doesn't exist in ${path.resolve(settings.templatePath)}`));
+    console.log(
+      chalk.red(
+        `'${options.type}' template folder doesn't exist in ${path.resolve(
+          settings.templatePath
+        )}`
+      )
+    );
     return;
   }
 
   console.log();
-  console.log(chalk.green(chalk.bold(`Generating files from '${type}' template with name: ${options.name}`)));
+  console.log(
+    chalk.green(
+      chalk.bold(
+        `Generating files from '${type}' template with name: ${options.name}`
+      )
+    )
+  );
 
   metalsmith(fullTemplatePath)
     .metadata(Object.assign({}, getNames(options.name)))
-    .source('.')
+    .source(".")
     .destination(path.resolve(options.destination))
     .clean(false)
     .use(renderPaths)
     .use(renderTemplates)
-    .build(function (err) {
+    .build(function(err) {
       if (err) {
         console.error(chalk.red(err));
-      }
-      else {
+      } else {
         console.log();
-        console.log(chalk.green('Done!'));
+        console.log(chalk.green("Done!"));
       }
     });
 };
@@ -61,7 +76,7 @@ function getNames(name) {
     name_lc: toLowerCase(name),
     name_sn: toSnakeCase(name),
     name_sp: toSpaceCase(name)
-  }
+  };
 }
 
 function toUpperCase(name) {
@@ -80,7 +95,7 @@ function renderPaths(files, metalsmith, done) {
   const keys = Object.keys(files);
   const metadata = metalsmith.metadata();
 
-  keys.forEach((key) => {
+  keys.forEach(key => {
     let newKey = replaceVars(key, metadata);
 
     if (newKey != key) {
@@ -99,13 +114,15 @@ function renderTemplates(files, metalsmith, done) {
   async.each(keys, run, done);
 
   function run(file, done) {
-    if(isTextOrBinary.isBinarySync(path.basename(file), files[file].contents)) {
+    if (
+      isTextOrBinary.isBinarySync(path.basename(file), files[file].contents)
+    ) {
       done();
       return;
     }
 
     let str = files[file].contents.toString();
-    render(str, metadata, function (err, res) {
+    render(str, metadata, function(err, res) {
       if (err) {
         return done(err);
       }
@@ -124,7 +141,6 @@ function replaceVars(value, object) {
     if (o != null && prop in o) {
       return o[prop];
     }
-    return '';
+    return "";
   });
 }
-

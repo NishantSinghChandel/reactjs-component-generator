@@ -6,20 +6,20 @@ const path = require("path");
 const chalk = require("chalk");
 
 const defaultSettings = {
-  viewDestination: "./src/view/",
-  storeDestination: "./src/store/",
   componentDestination: "./src/components/",
   tscomponentDestination: "./components/",
   pageDestination: "./pages/",
   tspageDestination: "./pages/",
-  reduxDestination: "./src/",
   setupDestination: "./src/",
+  storeDestination: "./src/store/",
+  reduxDestination: "./src/",
   reduxModuleDestination: "./src/store/",
-  serviceModuleDestination: "./src/services/",
   servicesDestination: "./src/",
   configDestination: "./src/services/",
   requestDestination: "./src/services/config/",
   storageDestination: "./src/services/config/",
+  serviceModuleDestination: "./src/services/",
+  viewDestination: "./src/view/",
   templatePath: ""
 };
 

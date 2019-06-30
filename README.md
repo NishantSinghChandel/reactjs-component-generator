@@ -389,3 +389,54 @@ Take a look at redux-box : `https://www.npmjs.com/search?q=redux-box`
 
 The generated file will be
 `*action.js *index.js *mutations.js *sagas.js *state.js`
+
+#### settings
+
+Set or display settings. Without any options it will display the settings. By default it will set the settings locally in a .reactgenerator file.
+You can also set global settings by using the global option ```-g --global```.
+
+```console
+$ rg settings
+```
+
+Options:
+
+* ```-v, --view-destination <destination>```: Set default view destination.
+* ```-c, --component-destination <destination>```: Set default component destination.
+* ```-s, --store-destination <destination>```: Set default store destination.
+* ```-t, --template-path <template-path>```: Set template path.
+* ```-l, --log```: Log global or local settings depending on the global flag.
+* ```-g, --global```: Set global settings.
+
+Examples:
+```console
+$ rg settings -l
+$ rg settings -v ./view -c ./component -s ./store/modules -t ./template
+$ rg settings -g -c ./components
+```
+
+#### reset
+
+Reset global settings to the defaults.
+
+```console
+$ rg reset
+```
+
+#### show-templates
+
+Open the default template directory. The default templates can be edited to fit your needs. 
+
+```console
+$ rg show-templates
+```
+
+#### copy-templates
+
+Copy the default templates to another directory. This is handy when you want to customize the default templates. 
+Don't forget to run ```rg init``` or set the template path with ```rg settings```.
+
+```console
+$ rg copy-templates
+```
+

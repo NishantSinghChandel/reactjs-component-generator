@@ -13,6 +13,11 @@ exports.getGeneratorQuestions = function(type, settings, name) {
         askType(),
         askName(name),
         askDestination(
+          templateType.FUNCTIONALCOMPONENT,
+          settings.componentDestination,
+          true
+        ),
+        askDestination(
           templateType.COMPONENT,
           settings.componentDestination,
           true
@@ -120,6 +125,13 @@ exports.getGeneratorQuestions = function(type, settings, name) {
       questions = [
         askName(name),
         askDestination(templateType.SETUP, settings.setupDestination)
+      ];
+      break;
+    }
+    case wizardType.FUNCTIONALCOMPONENT: {
+      questions = [
+        askName(name),
+        askDestination(templateType.FUNCTIONALCOMPONENT, settings.componentDestination)
       ];
       break;
     }

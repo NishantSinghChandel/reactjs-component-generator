@@ -1,5 +1,6 @@
 module.exports = {
   WIZARD: "wizard",
+  FUNCTIONALCOMPONENT: "functional-component",
   COMPONENT: "component",
   STORE: "store",
   VIEW: "view",

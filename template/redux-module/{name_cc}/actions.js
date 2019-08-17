@@ -2,7 +2,7 @@ import { {{name_pc }} } from "../../services/{{name_cc}}";
 import { mutation } from "./mutations";
 
 const handleError = err => {
-  console.log("Error in {{ name_cc }} action : ", err);
+  console.error("Error in {{ name_cc }} action : ", err);
 };
 
 // Actions

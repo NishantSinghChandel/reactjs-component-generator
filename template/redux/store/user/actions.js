@@ -2,7 +2,7 @@ import { User } from "../../services/user";
 import { mutation } from "./mutations";
 
 const handleError = err => {
-  console.log("Error in Login action : ", err);
+  console.error("Error in Login action : ", err);
 };
 
 // Actions

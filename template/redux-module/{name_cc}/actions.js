@@ -10,7 +10,6 @@ export const get{{name_pc }}ListRequest = () => async dispatch => {
   try {
     dispatch(mutation.isFetchingData(true))
     let result = await {{name_pc}}.get{{name_pc}}List();
-    dispatch(mutation.set{{name_pc}}List(result));
     if (result) {
       dispatch(mutation.set{{name_pc}}List(result ? result : []));
       dispatch(mutation.isFetchingData(false))

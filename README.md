@@ -18,9 +18,17 @@ $ rg
 
 **Note**: Names can be inputted in any format (slug-case, camelCase, PascalCase, UPPERCASE, lowercase etc.).
 
-#### component
+#### functional component
 
-Directly create a component based on the current settings.
+Directly create a functional component based on the current settings.
+
+```console
+$ rg functional-component <name>
+```
+
+#### class component
+
+Directly create a class component based on the current settings.
 
 ```console
 $ rg component <name>
@@ -154,7 +162,7 @@ $ rg redux-module <name>
 
 Arguments:
 
-name: The name doen't have any impact here but required.
+name: The name doesn't have any impact here but required.
 Options:
 
 - `-d, --destination <destination>`: Override the destination for store module.

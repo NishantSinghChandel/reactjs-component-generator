@@ -1,4 +1,5 @@
 module.exports = {
+  FUNCTIONALCOMPONENT: "functional-component",
   COMPONENT: "component",
   STYLEDCOMPONENT: "styled-component",
   TSCOMPONENT: "tscomponent",

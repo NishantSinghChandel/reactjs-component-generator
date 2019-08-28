@@ -8,7 +8,7 @@ const _authorizationHeaders = () => ({
 });
 
 const handleError = err => {
-  console.log(`Api call error in services -> request.js : `, err);
+  console.error(`Api call error in services -> request.js : `, err);
 };
 
 export const getRequest = async (url, headers = _authorizationHeaders()) => {

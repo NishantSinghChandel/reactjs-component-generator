@@ -28,6 +28,7 @@
     "react-generator-init": "bin/react-generator-init",
     "rg": "bin/react-generator",
     "rg-wizard": "bin/react-generator-wizard",
+    "rg-functional-component": "bin/react-generator-functional-component",
     "rg-component": "bin/react-generator-component",
     "rg-tscomponent": "bin/react-generator-tscomponent",
     "rg-styled": "bin/react-generator-component-styled",

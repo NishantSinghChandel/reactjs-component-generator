@@ -16,7 +16,7 @@ The most basic command runs a wizard to create a component.
 $ rg
 ```
 
-**Note**: Names can be inputted in any format (slug-case, camelCase, PascalCase, UPPERCASE, lowercase etc.).
+**Note**: Names can be given in any format (slug-case, camelCase, PascalCase, UPPERCASE, lowercase etc.).
 
 #### functional component
 

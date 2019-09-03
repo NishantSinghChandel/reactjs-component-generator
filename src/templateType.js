@@ -14,5 +14,6 @@ module.exports = {
   REQUEST: "request",
   REDUX: "redux",
   REDUXMODULE: "redux-module",
-  VIEW: "view"
+  VIEW: "view",
+  ROUTE: "route"
 };

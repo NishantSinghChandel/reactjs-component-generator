@@ -185,6 +185,14 @@ The generated file will be
 - reducer.js [All reducer related to module]
 - state.js [All state variable related to module]
 
+#### route [using react-router]
+
+Directly create a react-router route setup.
+
+```console
+$ rg route
+```
+
 #### services
 
 Directly create a services based on the current settings.

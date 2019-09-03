@@ -15,5 +15,6 @@ module.exports = {
   STORAGE: "storage",
   REQUEST: "request",
   CONFIG: "config",
-  SETUP: "setup"
+  SETUP: "setup",
+  ROUTE: "route"
 };

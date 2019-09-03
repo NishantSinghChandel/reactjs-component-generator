@@ -48,7 +48,8 @@
     "rg-setup": "bin/react-generator-setup",
     "rg-show-templates": "bin/react-generator-show-templates",
     "rg-copy-templates": "bin/react-generator-copy-templates",
-    "rg-init": "bin/react-generator-init"
+    "rg-init": "bin/react-generator-init",
+    "rg-route": "bin/react-generator-route"
   },
   "keywords": [
     "redux",

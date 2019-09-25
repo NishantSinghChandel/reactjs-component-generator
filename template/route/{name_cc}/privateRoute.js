@@ -2,10 +2,17 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import isAuthenticated from "./isAuthenticated";
 
-// "/login" path is assumed login page
-// please change as per requirement
+// if user is authenticated, renders the given component,
+// else redirects to the redirectPath
+// eg. use case: home, profile routes
 
 export function PrivateRoute({ component: Component, ...rest }) {
+
+    const redirectPath = {
+        pathname: "/login",
+        state: { from: props.location }
+    }
+
     return (
         <Route
             {...rest}
@@ -13,12 +20,9 @@ export function PrivateRoute({ component: Component, ...rest }) {
                 return isAuthenticated() ?
                     <Component {...props} /> :
                     <Redirect
-                        to={{
-                            pathname: "/login",
-                            state: { from: props.location }
-                        }}
+                        to={redirectPath}
                     />
-            }
+                }
             }
         />
     );

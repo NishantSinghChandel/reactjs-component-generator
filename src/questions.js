@@ -55,7 +55,8 @@ exports.getGeneratorQuestions = function(type, settings, name) {
           true
         ),
         askDestination(templateType.REQUEST, settings.requestDestination, true),
-        askDestination(templateType.STORAGE, settings.storageDestination, true)
+        askDestination(templateType.STORAGE, settings.storageDestination, true),
+        askDestination(templateType.ROUTE, settings.routeDestination, true),
       ];
       break;
     }
@@ -180,6 +181,13 @@ exports.getGeneratorQuestions = function(type, settings, name) {
       questions = [
         askName(name),
         askDestination(templateType.TSPAGE, settings.tspageDestination)
+      ];
+      break;
+    }
+    case wizardType.ROUTE: {
+      questions = [
+        askName(name),
+        askDestination(templateType.ROUTE, settings.routeDestination)
       ];
       break;
     }

@@ -26,6 +26,7 @@
     "react-generator-show-templates": "bin/react-generator-show-templates",
     "react-generator-copy-templates": "bin/react-generator-copy-templates",
     "react-generator-init": "bin/react-generator-init",
+    "react-generator-route": "bin/react-generator-route",
     "rg": "bin/react-generator",
     "rg-wizard": "bin/react-generator-wizard",
     "rg-functional-component": "bin/react-generator-functional-component",
@@ -48,7 +49,8 @@
     "rg-setup": "bin/react-generator-setup",
     "rg-show-templates": "bin/react-generator-show-templates",
     "rg-copy-templates": "bin/react-generator-copy-templates",
-    "rg-init": "bin/react-generator-init"
+    "rg-init": "bin/react-generator-init",
+    "rg-route": "bin/react-generator-route"
   },
   "keywords": [
     "redux",
